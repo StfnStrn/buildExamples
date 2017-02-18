@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     18.02.2017 23:14:05                                                        
+
+     Learning.Ant.Build    
+     Build the Learning IDE using Ant and PDE Build 
+                   
+     Stefan                                                                
+     ====================================================================== -->
+<project name="Learning.Ant.Build" default="run">
+    <description>
+            Build the Learning IDE using Ant and PDE Build 
+    </description>
+
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="run" depends="prepare.run" description="Build the Learning IDE using Ant and PDE Build ">
+    	<!-- invoke the PDE build -->
+    	
+    	<!-- ZIP and upload the result -->
+    	
+    </target>
+	
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: prepare.run                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="prepare.run">
+    	<!-- check the eclipse SDK is available or abort -->
+    	
+    	<!-- sort the sources into plugins and features before invoking the PDE build -->
+    	
+    	<!-- prepare the build.properties file -->
+    </target>
+
+</project>
