@@ -67,6 +67,7 @@ import org.eclipse.xtext.ui.refactoring.ui.IRenameSupport;
 import org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferences;
 import org.eclipse.xtext.ui.resource.ResourceServiceDescriptionLabelProvider;
 import org.eclipse.xtext.ui.shared.Access;
+import org.eclipse.xtext.ui.wizard.IProjectCreator;
 import org.learning.example.ide.contentassist.antlr.MyDslParser;
 import org.learning.example.ide.contentassist.antlr.PartialMyDslContentAssistParser;
 import org.learning.example.ide.contentassist.antlr.internal.InternalMyDslLexer;
@@ -75,6 +76,7 @@ import org.learning.example.ui.labeling.MyDslDescriptionLabelProvider;
 import org.learning.example.ui.labeling.MyDslLabelProvider;
 import org.learning.example.ui.outline.MyDslOutlineTreeProvider;
 import org.learning.example.ui.quickfix.MyDslQuickfixProvider;
+import org.learning.example.ui.wizard.MyDslProjectCreator;
 
 /**
  * Manual modifications go to {@link MyDslUiModule}.
@@ -275,6 +277,11 @@ public abstract class AbstractMyDslUiModule extends DefaultUiModule {
 	// contributed by org.eclipse.xtext.xtext.generator.ui.compare.CompareFragment2
 	public Class<? extends IViewerCreator> bindIViewerCreator() {
 		return DefaultViewerCreator.class;
+	}
+	
+	// contributed by org.eclipse.xtext.xtext.generator.ui.projectWizard.SimpleProjectWizardFragment2
+	public Class<? extends IProjectCreator> bindIProjectCreator() {
+		return MyDslProjectCreator.class;
 	}
 	
 }

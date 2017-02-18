@@ -33,6 +33,11 @@ Workflow {
 			name = "org.learning.example.MyDsl"
 			fileExtensions = "mydsl"
 
+			newProjectWizardForEclipse = {
+				generate = true
+				pluginProject = false
+			}
+
 			serializer = {
 				generateStub = false
 			}
